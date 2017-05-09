@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Adder16Bit.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Adder16Bit.syr" 

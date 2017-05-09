@@ -1,0 +1,546 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: ReadInput.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ReadInput.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ReadInput"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : ReadInput
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\Projects\Xilinx\fpgav1.1\Debouncer.vhd" into library work
+Parsing entity <Debouncer>.
+Parsing architecture <Debounce> of entity <debouncer>.
+Parsing VHDL file "D:\Projects\Xilinx\fpgav1.1\ReadInput.vhd" into library work
+Parsing entity <ReadInput>.
+Parsing architecture <Read> of entity <readinput>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <ReadInput> (architecture <Read>) from library <work>.
+
+Elaborating entity <Debouncer> (architecture <Debounce>) with generics from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ReadInput>.
+    Related source file is "D:\Projects\Xilinx\fpgav1.1\ReadInput.vhd".
+    Set property "KEEP = TRUE" for signal <A<3:2>>.
+    Set property "KEEP = TRUE" for signal <A<1:0>>.
+    Found 2-bit register for signal <A<1:0>>.
+    Found 4-bit register for signal <B>.
+    Found 4-bit register for signal <C>.
+    Found 4-bit register for signal <I>.
+    Found 8-bit register for signal <NR1>.
+    Found 8-bit register for signal <NR2>.
+    Found 2-bit register for signal <OP>.
+    Found 1-bit register for signal <E>.
+    Found 2-bit register for signal <SIGN>.
+    Found 4-bit adder for signal <I[3]_GND_4_o_add_0_OUT> created at line 48.
+    Found 12-bit adder for signal <n0059> created at line 54.
+    Found 12-bit adder for signal <n0040> created at line 54.
+    Found 8-bit subtractor for signal <GND_4_o_unary_minus_7_OUT<7:0>> created at line 0.
+    Found 4x7-bit multiplier for signal <B[3]_PWR_4_o_MuLt_2_OUT> created at line 54.
+    Found 4x4-bit multiplier for signal <C[3]_PWR_4_o_MuLt_3_OUT> created at line 54.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal A<1:0> may hinder XST clustering optimizations.
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  35 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <ReadInput> synthesized.
+
+Synthesizing Unit <Debouncer>.
+    Related source file is "D:\Projects\Xilinx\fpgav1.1\Debouncer.vhd".
+        counter_size = 19
+    Found 20-bit register for signal <counter>.
+    Found 1-bit register for signal <Q>.
+    Found 2-bit register for signal <flipflops>.
+    Found 20-bit adder for signal <counter[19]_GND_7_o_add_0_OUT> created at line 31.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+Unit <Debouncer> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 2
+ 4x4-bit multiplier                                    : 1
+ 7x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 5
+ 12-bit adder                                          : 2
+ 20-bit adder                                          : 1
+ 4-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+# Registers                                            : 12
+ 1-bit register                                        : 2
+ 2-bit register                                        : 4
+ 20-bit register                                       : 1
+ 4-bit register                                        : 3
+ 8-bit register                                        : 2
+# Multiplexers                                         : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Debouncer>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <Debouncer> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ReadInput>.
+The following registers are absorbed into counter <I>: 1 register on signal <I>.
+	Multiplier <Mmult_B[3]_PWR_4_o_MuLt_2_OUT> in block <ReadInput> and adder/subtractor <Madd_n0059_Madd> in block <ReadInput> are combined into a MAC<Maddsub_B[3]_PWR_4_o_MuLt_2_OUT>.
+Unit <ReadInput> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 1
+ 7x4-to-8-bit MAC                                      : 1
+# Multipliers                                          : 1
+ 4x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 3
+ 4-bit adder                                           : 1
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+# Counters                                             : 2
+ 20-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 34
+ Flip-Flops                                            : 34
+# Multiplexers                                         : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ReadInput> ...
+
+Optimizing unit <Debouncer> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ReadInput, actual ratio is 0.
+
+Final Macro Processing ...
+
+Processing Unit <ReadInput> :
+	Found 3-bit shift register for signal <A<0>>.
+	Found 3-bit shift register for signal <A<1>>.
+Unit <ReadInput> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 48
+ Flip-Flops                                            : 48
+# Shift Registers                                      : 2
+ 3-bit shift register                                  : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ReadInput.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 79
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 19
+#      LUT2                        : 2
+#      LUT3                        : 3
+#      LUT4                        : 6
+#      LUT5                        : 4
+#      LUT6                        : 1
+#      MUXCY                       : 19
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 49
+#      FD                          : 6
+#      FDE                         : 19
+#      FDR                         : 4
+#      FDRE                        : 20
+# Shift Registers                  : 2
+#      SRLC16E                     : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 5
+#      OBUF                        : 19
+# DSPs                             : 3
+#      DSP48A1                     : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              49  out of  18224     0%  
+ Number of Slice LUTs:                   40  out of   9112     0%  
+    Number used as Logic:                38  out of   9112     0%  
+    Number used as Memory:                2  out of   2176     0%  
+       Number used as SRL:                2
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     52
+   Number with an unused Flip Flop:       3  out of     52     5%  
+   Number with an unused LUT:            12  out of     52    23%  
+   Number of fully used LUT-FF pairs:    37  out of     52    71%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    232    10%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of DSP48A1s:                      3  out of     32     9%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+db/Q                               | BUFG                   | 30    |
+N0                                 | NONE(Madd_n0040_Madd1) | 1     |
+CLK                                | BUFGP                  | 23    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 13.395ns (Maximum Frequency: 74.658MHz)
+   Minimum input arrival time before clock: 7.150ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'db/Q'
+  Clock period: 13.395ns (frequency: 74.658MHz)
+  Total number of paths / destination ports: 169466 / 48
+-------------------------------------------------------------------------
+Delay:               13.395ns (Levels of Logic = 4)
+  Source:            Mmult_C[3]_PWR_4_o_MuLt_3_OUT (DSP)
+  Destination:       NR1_5 (FF)
+  Source Clock:      db/Q rising
+  Destination Clock: db/Q rising
+
+  Data Path: Mmult_C[3]_PWR_4_o_MuLt_3_OUT to NR1_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     DSP48A1:CLK->PCOUT47    1   6.743   0.000  Mmult_C[3]_PWR_4_o_MuLt_3_OUT (Mmult_C[3]_PWR_4_o_MuLt_3_OUT_PCOUT_to_Maddsub_B[3]_PWR_4_o_MuLt_2_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  Maddsub_B[3]_PWR_4_o_MuLt_2_OUT (Maddsub_B[3]_PWR_4_o_MuLt_2_OUT_PCOUT_to_Madd_n0040_Madd1_PCIN_47)
+     DSP48A1:PCIN47->P4    2   2.264   0.961  Madd_n0040_Madd1 (n0040<4>)
+     LUT5:I0->O            3   0.203   0.651  Msub_GND_4_o_unary_minus_7_OUT<7:0>_cy<4>11 (Msub_GND_4_o_unary_minus_7_OUT<7:0>_cy<4>)
+     LUT3:I2->O            2   0.205   0.000  Mmux_GND_4_o_BUS_0002_mux_7_OUT61 (GND_4_o_BUS_0002_mux_7_OUT<5>)
+     FDE:D                     0.102          NR1_5
+    ----------------------------------------
+    Total                     13.395ns (11.782ns logic, 1.612ns route)
+                                       (88.0% logic, 12.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 2.928ns (frequency: 341.588MHz)
+  Total number of paths / destination ports: 275 / 62
+-------------------------------------------------------------------------
+Delay:               2.928ns (Levels of Logic = 1)
+  Source:            db/flipflops_0 (FF)
+  Destination:       db/counter_19 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: db/flipflops_0 to db/counter_19
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.755  db/flipflops_0 (db/flipflops_0)
+     LUT2:I0->O           20   0.203   1.092  db/counter_set1 (db/counter_set)
+     FDRE:R                    0.430          db/counter_0
+    ----------------------------------------
+    Total                      2.928ns (1.080ns logic, 1.847ns route)
+                                       (36.9% logic, 63.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'db/Q'
+  Total number of paths / destination ports: 298 / 26
+-------------------------------------------------------------------------
+Offset:              7.150ns (Levels of Logic = 4)
+  Source:            DIN<1> (PAD)
+  Destination:       NR1_5 (FF)
+  Destination Clock: db/Q rising
+
+  Data Path: DIN<1> to NR1_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   0.683  DIN_1_IBUF (DIN_1_IBUF)
+     DSP48A1:B1->P4        2   3.123   0.961  Madd_n0040_Madd1 (n0040<4>)
+     LUT5:I0->O            3   0.203   0.651  Msub_GND_4_o_unary_minus_7_OUT<7:0>_cy<4>11 (Msub_GND_4_o_unary_minus_7_OUT<7:0>_cy<4>)
+     LUT3:I2->O            2   0.205   0.000  Mmux_GND_4_o_BUS_0002_mux_7_OUT61 (GND_4_o_BUS_0002_mux_7_OUT<5>)
+     FDE:D                     0.102          NR1_5
+    ----------------------------------------
+    Total                      7.150ns (4.855ns logic, 2.295ns route)
+                                       (67.9% logic, 32.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'N0'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.701ns (Levels of Logic = 1)
+  Source:            DIN<1> (PAD)
+  Destination:       Madd_n0040_Madd1 (DSP)
+  Destination Clock: N0 rising
+
+  Data Path: DIN<1> to Madd_n0040_Madd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   0.683  DIN_1_IBUF (DIN_1_IBUF)
+     DSP48A1:B1                2.796          Madd_n0040_Madd1
+    ----------------------------------------
+    Total                      4.701ns (4.018ns logic, 0.683ns route)
+                                       (85.5% logic, 14.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.903ns (Levels of Logic = 1)
+  Source:            BTN (PAD)
+  Destination:       db/flipflops_0 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: BTN to db/flipflops_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  BTN_IBUF (BTN_IBUF)
+     FD:D                      0.102          db/flipflops_0
+    ----------------------------------------
+    Total                      1.903ns (1.324ns logic, 0.579ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'db/Q'
+  Total number of paths / destination ports: 19 / 19
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            E (FF)
+  Destination:       E (PAD)
+  Source Clock:      db/Q rising
+
+  Data Path: E to E
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  E (E_OBUF)
+     OBUF:I->O                 2.571          E_OBUF (E)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    2.928|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock N0
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+db/Q           |   10.455|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock db/Q
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+db/Q           |   13.395|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.05 secs
+ 
+--> 
+
+Total memory usage is 298784 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

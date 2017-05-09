@@ -1,0 +1,3 @@
+vhdl work "Adder1Bit.vhd"
+vhdl work "Adder8Bit.vhd"
+vhdl work "Divider.vhd"

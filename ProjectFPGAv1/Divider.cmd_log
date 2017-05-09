@@ -1,0 +1,24 @@
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Divider.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Divider.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Divider.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Divider.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Divider.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Divider.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Divider.ucf -p xc6slx16-csg324-3 Divider.ngc Divider.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Divider_map.ncd Divider.ngd Divider.pcf 
+par -w -intstyle ise -ol high -mt off Divider_map.ncd Divider.ncd Divider.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Divider.twx Divider.ncd -o Divider.twr Divider.pcf -ucf Divider.ucf 
+bitgen -intstyle ise -f Divider.ut Divider.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Divider.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Divider.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Divider.ucf -p xc6slx16-csg324-3 Divider.ngc Divider.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Divider_map.ncd Divider.ngd Divider.pcf 
+par -w -intstyle ise -ol high -mt off Divider_map.ncd Divider.ncd Divider.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Divider.twx Divider.ncd -o Divider.twr Divider.pcf -ucf Divider.ucf 
+bitgen -intstyle ise -f Divider.ut Divider.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Divider.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Divider.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Divider.ucf -p xc6slx16-csg324-3 Divider.ngc Divider.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Divider_map.ncd Divider.ngd Divider.pcf 
+par -w -intstyle ise -ol high -mt off Divider_map.ncd Divider.ncd Divider.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Divider.twx Divider.ncd -o Divider.twr Divider.pcf -ucf Divider.ucf 
+bitgen -intstyle ise -f Divider.ut Divider.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Divider.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Divider.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Divider.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Divider.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Divider.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Divider.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Divider.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Divider.syr" 

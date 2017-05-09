@@ -1,0 +1,458 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: Multiplier.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Multiplier.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Multiplier"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : Multiplier
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\Projects\Xilinx\fpgav1.1\Adder1Bit.vhd" into library work
+Parsing entity <Adder>.
+Parsing architecture <Add> of entity <adder>.
+Parsing VHDL file "D:\Projects\Xilinx\fpgav1.1\Adder8Bit.vhd" into library work
+Parsing entity <Adder8Bit>.
+Parsing architecture <Add> of entity <adder8bit>.
+Parsing VHDL file "D:\Projects\Xilinx\fpgav1.1\Adder16Bit.vhd" into library work
+Parsing entity <Adder16Bit>.
+Parsing architecture <Add> of entity <adder16bit>.
+Parsing VHDL file "D:\Projects\Xilinx\fpgav1.1\Multiplier.vhd" into library work
+Parsing entity <Multiplier>.
+Parsing architecture <Multiply> of entity <multiplier>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Multiplier> (architecture <Multiply>) from library <work>.
+
+Elaborating entity <Adder16Bit> (architecture <Add>) from library <work>.
+
+Elaborating entity <Adder8Bit> (architecture <Add>) from library <work>.
+
+Elaborating entity <Adder> (architecture <Add>) from library <work>.
+INFO:HDLCompiler:679 - "D:\Projects\Xilinx\fpgav1.1\Multiplier.vhd" Line 82. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Multiplier>.
+    Related source file is "D:\Projects\Xilinx\fpgav1.1\Multiplier.vhd".
+    Found 1-bit register for signal <sign>.
+    Found 16-bit register for signal <NB>.
+    Found 16-bit register for signal <sum>.
+    Found 16-bit register for signal <sum1>.
+    Found 1-bit register for signal <state>.
+    Found 16-bit register for signal <Q>.
+    Found 8-bit register for signal <NA>.
+    Found 8-bit adder for signal <A[7]_GND_6_o_add_1_OUT> created at line 44.
+    Found 16-bit adder for signal <GND_6_o_GND_6_o_add_4_OUT> created at line 51.
+    Found 16-bit adder for signal <S[15]_GND_6_o_add_9_OUT> created at line 78.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  74 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
+Unit <Multiplier> synthesized.
+
+Synthesizing Unit <Adder16Bit>.
+    Related source file is "D:\Projects\Xilinx\fpgav1.1\Adder16Bit.vhd".
+    Summary:
+	no macro.
+Unit <Adder16Bit> synthesized.
+
+Synthesizing Unit <Adder8Bit>.
+    Related source file is "D:\Projects\Xilinx\fpgav1.1\Adder8Bit.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Adder8Bit> synthesized.
+
+Synthesizing Unit <Adder>.
+    Related source file is "D:\Projects\Xilinx\fpgav1.1\Adder1Bit.vhd".
+    Summary:
+Unit <Adder> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 16-bit adder                                          : 2
+ 8-bit adder                                           : 1
+# Registers                                            : 7
+ 1-bit register                                        : 2
+ 16-bit register                                       : 4
+ 8-bit register                                        : 1
+# Multiplexers                                         : 9
+ 1-bit 2-to-1 multiplexer                              : 4
+ 16-bit 2-to-1 multiplexer                             : 3
+ 8-bit 2-to-1 multiplexer                              : 2
+# Xors                                                 : 34
+ 1-bit xor2                                            : 34
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 16-bit adder                                          : 2
+ 8-bit adder                                           : 1
+# Registers                                            : 74
+ Flip-Flops                                            : 74
+# Multiplexers                                         : 14
+ 1-bit 2-to-1 multiplexer                              : 10
+ 16-bit 2-to-1 multiplexer                             : 3
+ 8-bit 2-to-1 multiplexer                              : 1
+# Xors                                                 : 34
+ 1-bit xor2                                            : 34
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Multiplier> ...
+
+Optimizing unit <Adder8Bit> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Multiplier, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 74
+ Flip-Flops                                            : 74
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Multiplier.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 128
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 11
+#      LUT3                        : 29
+#      LUT4                        : 3
+#      LUT5                        : 39
+#      LUT6                        : 12
+#      MUXCY                       : 15
+#      VCC                         : 1
+#      XORCY                       : 16
+# FlipFlops/Latches                : 74
+#      FD                          : 2
+#      FDE                         : 40
+#      FDRE                        : 32
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 33
+#      IBUF                        : 17
+#      OBUF                        : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              74  out of  18224     0%  
+ Number of Slice LUTs:                   95  out of   9112     1%  
+    Number used as Logic:                95  out of   9112     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    110
+   Number with an unused Flip Flop:      36  out of    110    32%  
+   Number with an unused LUT:            15  out of    110    13%  
+   Number of fully used LUT-FF pairs:    59  out of    110    53%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                          34
+ Number of bonded IOBs:                  34  out of    232    14%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 74    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 11.462ns (Maximum Frequency: 87.244MHz)
+   Minimum input arrival time before clock: 3.556ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 11.462ns (frequency: 87.244MHz)
+  Total number of paths / destination ports: 4162 / 178
+-------------------------------------------------------------------------
+Delay:               11.462ns (Levels of Logic = 26)
+  Source:            sum_1 (FF)
+  Destination:       Q_15 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: sum_1 to Q_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.447   0.995  sum_1 (sum_1)
+     LUT5:I0->O            6   0.203   0.849  add0/a0/a1/COUT1 (add0/a0/CARRY<1>)
+     LUT5:I3->O            6   0.203   0.849  add0/a0/a3/COUT1 (add0/a0/CARRY<3>)
+     LUT5:I3->O            6   0.203   0.849  add0/a0/a5/COUT1 (add0/a0/CARRY<5>)
+     LUT5:I3->O            6   0.203   0.849  add0/a0/Mmux_COUT11 (add0/CARRY)
+     LUT5:I3->O            6   0.203   0.849  add0/a1/a1/COUT1 (add0/a1/CARRY<1>)
+     LUT5:I3->O            6   0.203   0.849  add0/a1/a3/COUT1 (add0/a1/CARRY<3>)
+     LUT5:I3->O            6   0.203   0.849  add0/a1/a5/COUT1 (add0/a1/CARRY<5>)
+     LUT5:I3->O            6   0.203   0.745  add0/a1/Mmux_COUT11 (carry)
+     LUT3:I2->O            1   0.205   0.000  add0/a0/S<0>11 (add0/a0/S<0>1)
+     MUXCY:S->O            1   0.172   0.000  Madd_S[15]_GND_6_o_add_9_OUT_cy<0> (Madd_S[15]_GND_6_o_add_9_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_S[15]_GND_6_o_add_9_OUT_cy<1> (Madd_S[15]_GND_6_o_add_9_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_S[15]_GND_6_o_add_9_OUT_cy<2> (Madd_S[15]_GND_6_o_add_9_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_S[15]_GND_6_o_add_9_OUT_cy<3> (Madd_S[15]_GND_6_o_add_9_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_S[15]_GND_6_o_add_9_OUT_cy<4> (Madd_S[15]_GND_6_o_add_9_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_S[15]_GND_6_o_add_9_OUT_cy<5> (Madd_S[15]_GND_6_o_add_9_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_S[15]_GND_6_o_add_9_OUT_cy<6> (Madd_S[15]_GND_6_o_add_9_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_S[15]_GND_6_o_add_9_OUT_cy<7> (Madd_S[15]_GND_6_o_add_9_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_S[15]_GND_6_o_add_9_OUT_cy<8> (Madd_S[15]_GND_6_o_add_9_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_S[15]_GND_6_o_add_9_OUT_cy<9> (Madd_S[15]_GND_6_o_add_9_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_S[15]_GND_6_o_add_9_OUT_cy<10> (Madd_S[15]_GND_6_o_add_9_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_S[15]_GND_6_o_add_9_OUT_cy<11> (Madd_S[15]_GND_6_o_add_9_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_S[15]_GND_6_o_add_9_OUT_cy<12> (Madd_S[15]_GND_6_o_add_9_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_S[15]_GND_6_o_add_9_OUT_cy<13> (Madd_S[15]_GND_6_o_add_9_OUT_cy<13>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_S[15]_GND_6_o_add_9_OUT_cy<14> (Madd_S[15]_GND_6_o_add_9_OUT_cy<14>)
+     XORCY:CI->O           1   0.180   0.580  Madd_S[15]_GND_6_o_add_9_OUT_xor<15> (S[15]_GND_6_o_add_9_OUT<15>)
+     LUT3:I2->O            1   0.205   0.000  Mmux_S[15]_S[15]_mux_10_OUT71 (S[15]_S[15]_mux_10_OUT<15>)
+     FDE:D                     0.102          Q_15
+    ----------------------------------------
+    Total                     11.462ns (3.201ns logic, 8.261ns route)
+                                       (27.9% logic, 72.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 87 / 18
+-------------------------------------------------------------------------
+Offset:              3.556ns (Levels of Logic = 3)
+  Source:            B<0> (PAD)
+  Destination:       NB_4 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: B<0> to NB_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.222   0.943  B_0_IBUF (B_0_IBUF)
+     LUT3:I0->O            3   0.205   0.879  NB[15]_GND_6_o_mux_19_OUT<3>11 (NB[15]_GND_6_o_mux_19_OUT<3>_bdd0)
+     LUT6:I3->O            1   0.205   0.000  NB[15]_GND_6_o_mux_19_OUT<4>1 (NB[15]_GND_6_o_mux_19_OUT<4>)
+     FDE:D                     0.102          NB_4
+    ----------------------------------------
+    Total                      3.556ns (1.734ns logic, 1.822ns route)
+                                       (48.8% logic, 51.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            Q_15 (FF)
+  Destination:       Q<15> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: Q_15 to Q<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  Q_15 (Q_15)
+     OBUF:I->O                 2.571          Q_15_OBUF (Q<15>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |   11.462|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.08 secs
+ 
+--> 
+
+Total memory usage is 295208 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

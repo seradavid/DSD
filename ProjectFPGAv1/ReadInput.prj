@@ -1,0 +1,2 @@
+vhdl work "Debouncer.vhd"
+vhdl work "ReadInput.vhd"

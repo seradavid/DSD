@@ -1,0 +1,200 @@
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Decoder.ngc Decoder.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Decoder_map.ncd Decoder.ngd Decoder.pcf 
+par -w -intstyle ise -ol high -mt off Decoder_map.ncd Decoder.ncd Decoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Decoder.twx Decoder.ncd -o Decoder.twr Decoder.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Decoder.ut Decoder.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Decoder.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Decoder.syr" 

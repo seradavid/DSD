@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Multiplier.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Multiplier.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Multiplier.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Multiplier.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Multiplier.ngc Multiplier.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Multiplier_map.ncd Multiplier.ngd Multiplier.pcf 
+par -w -intstyle ise -ol high -mt off Multiplier_map.ncd Multiplier.ncd Multiplier.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Multiplier.twx Multiplier.ncd -o Multiplier.twr Multiplier.pcf 
+bitgen -intstyle ise -f Multiplier.ut Multiplier.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Multiplier.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Multiplier.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Multiplier.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Multiplier.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Decoder.ucf -p xc6slx16-csg324-3 Multiplier.ngc Multiplier.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Multiplier_map.ncd Multiplier.ngd Multiplier.pcf 
+par -w -intstyle ise -ol high -mt off Multiplier_map.ncd Multiplier.ncd Multiplier.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Multiplier.twx Multiplier.ncd -o Multiplier.twr Multiplier.pcf -ucf Decoder.ucf 
+bitgen -intstyle ise -f Multiplier.ut Multiplier.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Multiplier.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Multiplier.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Multiplier.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Multiplier.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Multiplier.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Multiplier.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Multiplier.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Multiplier.syr" 
