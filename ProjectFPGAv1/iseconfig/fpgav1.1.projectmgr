@@ -7,6 +7,7 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Adder16Bit - Add D:|Projects|Xilinx|ProjectFPGAv1|Adder16Bit.vhd</ClosedNode>
          <ClosedNode>/Adder16Bit - Add D:|Projects|Xilinx|fpgav1.1|Adder16Bit.vhd</ClosedNode>
          <ClosedNode>/Adder8Bit - Add D:|Projects|Xilinx|fpgav1.1|Adder8Bit.vhd</ClosedNode>
          <ClosedNode>/Calculator - Calculate D:|Projects|Xilinx|ProjectFPGAv1.1|Calculator.vhd/add1 - Adder8Bit - Add</ClosedNode>
@@ -15,6 +16,12 @@
          <ClosedNode>/Calculator - Calculate D:|Projects|Xilinx|ProjectFPGAv1.1|Calculator.vhd/mul3 - Multiplier - Multiply</ClosedNode>
          <ClosedNode>/Calculator - Calculate D:|Projects|Xilinx|ProjectFPGAv1.1|Calculator.vhd/read0 - ReadInput - Read</ClosedNode>
          <ClosedNode>/Calculator - Calculate D:|Projects|Xilinx|ProjectFPGAv1.1|Calculator.vhd/sub2 - Adder8Bit - Add</ClosedNode>
+         <ClosedNode>/Calculator - Calculate D:|Projects|Xilinx|ProjectFPGAv1|Calculator.vhd/add1 - Adder8Bit - Add</ClosedNode>
+         <ClosedNode>/Calculator - Calculate D:|Projects|Xilinx|ProjectFPGAv1|Calculator.vhd/div4 - Divider - Divide</ClosedNode>
+         <ClosedNode>/Calculator - Calculate D:|Projects|Xilinx|ProjectFPGAv1|Calculator.vhd/dpl5 - Decoder - Display</ClosedNode>
+         <ClosedNode>/Calculator - Calculate D:|Projects|Xilinx|ProjectFPGAv1|Calculator.vhd/mul3 - Multiplier - Multiply</ClosedNode>
+         <ClosedNode>/Calculator - Calculate D:|Projects|Xilinx|ProjectFPGAv1|Calculator.vhd/read0 - ReadInput - Read</ClosedNode>
+         <ClosedNode>/Calculator - Calculate D:|Projects|Xilinx|ProjectFPGAv1|Calculator.vhd/sub2 - Adder8Bit - Add</ClosedNode>
          <ClosedNode>/Calculator - Calculate D:|Projects|Xilinx|fpgav1.1|Calculator.vhd/add1 - Adder8Bit - Add</ClosedNode>
          <ClosedNode>/Calculator - Calculate D:|Projects|Xilinx|fpgav1.1|Calculator.vhd/div4 - Divider - Divide</ClosedNode>
          <ClosedNode>/Calculator - Calculate D:|Projects|Xilinx|fpgav1.1|Calculator.vhd/dpl5 - Decoder - Display</ClosedNode>
@@ -29,13 +36,13 @@
          <ClosedNode>/ReadInput - Read D:|Projects|Xilinx|fpgav1.1|ReadInput.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>fpgav1.1</SelectedItem>
+         <SelectedItem>Calculator - Calculate (D:/Projects/Xilinx/ProjectFPGAv1/Calculator.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000013d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000013d0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>fpgav1.1</CurrentItem>
+      <CurrentItem>Calculator - Calculate (D:/Projects/Xilinx/ProjectFPGAv1/Calculator.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>

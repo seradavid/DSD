@@ -24,8 +24,8 @@ signal n1, n2, n3, n4, n5 : integer range 0 to 9 := 0; -- The five digits of the
 constant limit_50 : STD_LOGIC_VECTOR(16 downto 0) := "11000011010100000"; -- 500.000 in binary, used to reduce the frequency
 signal counter_50 : STD_LOGIC_VECTOR(16 downto 0) := (others => '0');     -- Counter, used to reduce the frequency
 signal newCLK  : STD_LOGIC := '0';                                        -- New clock with a frequecy of 500 Hz
-constant limit_1 : STD_LOGIC_VECTOR(7 downto 0) := "11111010";            -- 250 in binary, used to reduce the frequency
-signal counter_1 : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');       -- Counter, used to reduce the frequency
+constant limit_1 : STD_LOGIC_VECTOR(8 downto 0) := "111110100";           -- 500 in binary, used to reduce the frequency
+signal counter_1 : STD_LOGIC_VECTOR(8 downto 0) := (others => '0');       -- Counter, used to reduce the frequency
 signal z : STD_LOGIC := '0';                                              -- New clock with a frequency of 1 Hz
 
 begin
@@ -85,7 +85,7 @@ begin
                AN1   <= '1';
                AN2   <= '1';
                AN3   <= '1';
-					if z = '1' and (n4 >= 0 or n5 >= 0) then
+					if z = '1' and (n4 > 0 or n5 > 0) then
 						Q <= code(n4);
 					else
 						Q <= code(n1);
@@ -96,7 +96,7 @@ begin
                AN1   <= '0';
                AN2   <= '1';
                AN3   <= '1';
-               if z = '1' and (n4 >= 0 or n5 >= 0) then
+               if z = '1' and (n4 > 0 or n5 > 0) then
 						Q <= code(n5);
 					else
 						Q <= code(n2);
@@ -107,7 +107,7 @@ begin
                AN1   <= '1';
                AN2   <= '0';
                AN3   <= '1';
-               if z = '1' and (n4 >= 0 or n5 >= 0) then
+               if z = '1' and (n4 > 0 or n5 > 0) then
 						Q <= "1111111";
 					else
 						Q <= code(n3);

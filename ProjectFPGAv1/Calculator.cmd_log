@@ -87,3 +87,33 @@ map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off Calculator_map.ncd Calculator.ncd Calculator.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
 bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/ProjectFPGAv1/Calculator.xst" -ofn "D:/Projects/Xilinx/ProjectFPGAv1/Calculator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc6slx16-csg324-3 Calculator.ngc Calculator.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
+par -w -intstyle ise -ol high -mt off Calculator_map.ncd Calculator.ncd Calculator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/ProjectFPGAv1/Calculator.xst" -ofn "D:/Projects/Xilinx/ProjectFPGAv1/Calculator.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/ProjectFPGAv1/Calculator.xst" -ofn "D:/Projects/Xilinx/ProjectFPGAv1/Calculator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc6slx16-csg324-3 Calculator.ngc Calculator.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
+par -w -intstyle ise -ol high -mt off Calculator_map.ncd Calculator.ncd Calculator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc6slx16-csg324-3 Calculator.ngc Calculator.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
+par -w -intstyle ise -ol high -mt off Calculator_map.ncd Calculator.ncd Calculator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/ProjectFPGAv1/Calculator.xst" -ofn "D:/Projects/Xilinx/ProjectFPGAv1/Calculator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc6slx16-csg324-3 Calculator.ngc Calculator.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
+par -w -intstyle ise -ol high -mt off Calculator_map.ncd Calculator.ncd Calculator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/ProjectFPGAv1/Calculator.xst" -ofn "D:/Projects/Xilinx/ProjectFPGAv1/Calculator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc6slx16-csg324-3 Calculator.ngc Calculator.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
+par -w -intstyle ise -ol high -mt off Calculator_map.ncd Calculator.ncd Calculator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 

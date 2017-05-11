@@ -16,3 +16,4 @@ xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Multiplier.xst" -ofn "D:/Pro
 xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Multiplier.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Multiplier.syr" 
 xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Multiplier.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Multiplier.syr" 
 xst -intstyle ise -ifn "D:/Projects/Xilinx/fpgav1.1/Multiplier.xst" -ofn "D:/Projects/Xilinx/fpgav1.1/Multiplier.syr" 
+xst -intstyle ise -ifn "D:/Projects/Xilinx/ProjectFPGAv1/Multiplier.xst" -ofn "D:/Projects/Xilinx/ProjectFPGAv1/Multiplier.syr" 
