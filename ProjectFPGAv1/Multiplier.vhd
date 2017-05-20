@@ -26,31 +26,32 @@ begin
 		if CLK'EVENT and CLK = '1' then	
 			case state is
 				when '0' =>	-- Wait state
-					if A(7) = '0' then 	 -- Initialize variable A 
-						NA := A;
-					else
-						NA := (not A) + 1; -- If the fist number is negative, we take the modulus
-						sign := not sign;  -- and change the sign
-					end if;
+					SUM  := (others => '0');
+					sign := '0';
 					
-					if B(7) = '0' then                 -- Initialize variable B
-						NB := "00000000" & B;  
-					else
-						NB := "00000000" & (not B) + 1; -- If the second number si negative, we take the modulus
-						sign := not sign;               -- and change the sign
-					end if; 
-					
-					SUM := (others => '0');
-					
-					if E = '1' then	       -- If Enable is '1' begin the algorithm
-						state <= '1';
+					if E = '1' then	       -- If Enable is '1' read the numbers
+						if A(7) = '0' then 	 -- Initialize variable A 
+							NA := A;
+						else
+							NA := (not A) + 1; -- If the fist number is negative, we take the modulus
+							sign := not sign;  -- and change the sign
+						end if;
+						
+						if B(7) = '0' then                 -- Initialize variable B
+							NB := "00000000" & B;  
+						else
+							NB := "00000000" & (not B) + 1; -- If the second number si negative, we take the modulus
+							sign := not sign;               -- and change the sign
+						end if;
+						
+						state <= '1';         -- And begin the algorithm
 					else
 						state <= '0';         -- Else remain in Wait state
 					end if;	 
 				when '1' => -- Compute state
 					if NA > "00000000" then	-- If A > 0
-						if NA(0) = '1' then	-- If A is an even number, than we add B to the sum
-							SUM := SUM + NB;
+						if NA(0) = '1' then	-- If A is an even number,
+							SUM := SUM + NB;  -- than we add B to the sum
 						end if;
 						
 						NA(7 downto 0)  := '0' & NA(7 downto 1);  -- Shift A to the right
@@ -60,7 +61,7 @@ begin
 							Q <= SUM;			   
 						else                 -- We change the sign based on the first numbers signs
 							Q <= (not SUM) + 1;
-						end if;			      
+						end if;
 						state <= '0';	      -- And go to the Wait state
 					end if;
 				when others => null;

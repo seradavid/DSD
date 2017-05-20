@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu May 11 18:52:11 2017
+// Written by: Map P.20131013 on Thu May 18 09:18:29 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -20,5 +20,9 @@ COMP "DIN<0>" LOCATE = SITE "T10" LEVEL 1;
 COMP "DIN<1>" LOCATE = SITE "T9" LEVEL 1;
 COMP "DIN<2>" LOCATE = SITE "V9" LEVEL 1;
 COMP "DIN<3>" LOCATE = SITE "M8" LEVEL 1;
+COMP "operation<0>" LOCATE = SITE "U16" LEVEL 1;
+COMP "operation<1>" LOCATE = SITE "V16" LEVEL 1;
+COMP "operation<2>" LOCATE = SITE "U11" LEVEL 1;
+COMP "operation<3>" LOCATE = SITE "V15" LEVEL 1;
 SCHEMATIC END;
 

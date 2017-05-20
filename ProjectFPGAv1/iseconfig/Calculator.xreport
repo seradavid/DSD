@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-05-11T18:51:09</DateModified>
+  <DateModified>2017-05-18T08:18:37</DateModified>
   <ModuleName>Calculator</ModuleName>
   <SummaryTimeStamp>2017-05-11T18:47:29</SummaryTimeStamp>
   <SavedFilePath>D:/Projects/Xilinx/ProjectFPGAv1/iseconfig/Calculator.xreport</SavedFilePath>
   <ImplementationReportsDirectory>D:/Projects/Xilinx/ProjectFPGAv1\</ImplementationReportsDirectory>
-  <DateInitialized>2017-05-11T18:49:25</DateInitialized>
+  <DateInitialized>2017-05-15T15:27:07</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

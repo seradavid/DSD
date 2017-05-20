@@ -50,9 +50,9 @@ begin
 			I := I + 1;				
 			
 			if I = 4 then                     -- We read the first number
-				na := to_integer(unsigned(A)); -- First digit of the first number
-				nb := to_integer(unsigned(B)); -- Second digit of the first number
-				nc := to_integer(unsigned(C)); -- Third digit of the first number
+				na := to_integer(unsigned(A)); -- Hundreds digit of the first number
+				nb := to_integer(unsigned(B)); -- Tens digit of the first number
+				nc := to_integer(unsigned(C)); -- Units digit of the first number
 				n1 := na * 100 + nb * 10 + nc; -- Construct the first number
 				
 				if SIGN(0) = '0' then          -- Sign is '+'
@@ -61,9 +61,9 @@ begin
 					NR1 <= std_logic_vector(to_signed(-n1, 8));
 				end if;
 			elsif I = 9 then                  -- We read the second number
-				na := to_integer(unsigned(A)); -- First digit of the second number
-				nb := to_integer(unsigned(B)); -- Second digit of the second number
-				nc := to_integer(unsigned(C)); -- Third digit of the second number
+				na := to_integer(unsigned(A)); -- Hundreds digit of the second number
+				nb := to_integer(unsigned(B)); -- Tens digit of the second number
+				nc := to_integer(unsigned(C)); -- Units digit of the second number
 				n2 := na * 100 + nb * 10 + nc;
 				
 				if SIGN(0) = '0' then          -- Sign is '+'
@@ -72,12 +72,16 @@ begin
 					NR2 <= std_logic_vector(to_signed(-n2, 8));	
 				end if;
 				
-				OP <= operation; -- Save the operation
+				--OP <= operation; -- Save the operation
 				E <= '1';        -- Tell other compoenets to process data
 				I := 0;			  -- Reset the counter
 			else
 				E <= '0';
-			end if;	
+			end if;
+
+			if I = 5 then
+				OP <= c(1) & c(0);
+			end if;
 		else
 			null;
 		end if;

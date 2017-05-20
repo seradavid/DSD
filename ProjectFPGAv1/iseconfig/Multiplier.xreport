@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-04-25T18:35:03</DateModified>
+  <DateModified>2017-05-15T15:33:24</DateModified>
   <ModuleName>Calculator</ModuleName>
   <SummaryTimeStamp>2017-04-25T18:34:13</SummaryTimeStamp>
-  <SavedFilePath>D:/Projects/Xilinx/fpgav1.1/iseconfig/Multiplier.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/Projects/Xilinx/fpgav1.1</ImplementationReportsDirectory>
-  <DateInitialized>2017-04-25T18:35:03</DateInitialized>
+  <SavedFilePath>D:/Projects/Xilinx/ProjectFPGAv1/iseconfig/Multiplier.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/Projects/Xilinx/ProjectFPGAv1\</ImplementationReportsDirectory>
+  <DateInitialized>2017-05-15T15:33:24</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

@@ -15,3 +15,7 @@ NET "AN0"    LOC = "N16";
 NET "AN1"    LOC = "N15";
 NET "AN2"    LOC = "P18";
 NET "AN3"    LOC = "P17";
+NET "operation(0)"    LOC = "U16";
+NET "operation(1)"    LOC = "V16";
+NET "operation(2)"    LOC = "U11";
+NET "operation(3)"    LOC = "V15";

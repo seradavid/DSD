@@ -5,58 +5,58 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Projects\Xilinx\ProjectFPGAv1\Calculator.vhd</arg>&quot; line <arg fmt="%s" index="2">84</arg>: Output port &lt;<arg fmt="%s" index="3">REMAINDER</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">div4</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Projects\Xilinx\ProjectFPGAv1\Calculator.vhd</arg>&quot; line <arg fmt="%s" index="2">86</arg>: Output port &lt;<arg fmt="%s" index="3">REMAINDER</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">div4</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="2774" delta="new" >HDL ADVISOR - <arg fmt="%s" index="1">KEEP</arg> <arg fmt="%s" index="2">property</arg> attached to signal <arg fmt="%s" index="3">A&lt;1:0&gt;</arg> may hinder XST clustering optimizations.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Projects\Xilinx\ProjectFPGAv1\Divider.vhd</arg>&quot; line <arg fmt="%s" index="2">35</arg>: Output port &lt;<arg fmt="%s" index="3">COUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">add0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Projects\Xilinx\ProjectFPGAv1\Divider.vhd</arg>&quot; line <arg fmt="%s" index="2">35</arg>: Output port &lt;<arg fmt="%s" index="3">COUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">add0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Projects\Xilinx\ProjectFPGAv1\Divider.vhd</arg>&quot; line <arg fmt="%s" index="2">36</arg>: Output port &lt;<arg fmt="%s" index="3">COUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">sub0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Projects\Xilinx\ProjectFPGAv1\Divider.vhd</arg>&quot; line <arg fmt="%s" index="2">36</arg>: Output port &lt;<arg fmt="%s" index="3">COUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">sub0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3231" delta="new" >The small RAM &lt;<arg fmt="%s" index="1">Mram_op[1]_PWR_6_o_wide_mux_3_OUT</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_n1[3]_X_14_o_wide_mux_24_OUT</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_n1[3]_X_14_o_wide_mux_24_OUT</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_n5[3]_X_14_o_wide_mux_29_OUT</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_n5[3]_X_14_o_wide_mux_29_OUT</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_n2[3]_X_14_o_wide_mux_30_OUT</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_n2[3]_X_14_o_wide_mux_30_OUT</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_n3[3]_X_14_o_wide_mux_35_OUT</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_n3[3]_X_14_o_wide_mux_35_OUT</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_n4[3]_X_14_o_wide_mux_23_OUT</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_n4[3]_X_14_o_wide_mux_23_OUT</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">div4/REMAINDER_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calculator</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">div4/REMAINDER_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calculator</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">div4/REMAINDER_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calculator</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">div4/REMAINDER_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calculator</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">div4/REMAINDER_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calculator</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">div4/REMAINDER_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calculator</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">div4/REMAINDER_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calculator</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">div4/REMAINDER_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calculator</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">div4/REMAINDER_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calculator</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">div4/REMAINDER_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calculator</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">div4/REMAINDER_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calculator</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">div4/REMAINDER_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calculator</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">div4/REMAINDER_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calculator</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">div4/REMAINDER_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calculator</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">div4/REMAINDER_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calculator</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">div4/REMAINDER_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calculator</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

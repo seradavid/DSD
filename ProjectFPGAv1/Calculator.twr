@@ -37,7 +37,7 @@ Setup/Hold to clock CLK
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-BTN         |    1.065(R)|      FAST  |   -0.538(R)|      SLOW  |CLK_BUFGP         |   0.000|
+BTN         |    1.061(R)|      FAST  |   -0.516(R)|      SLOW  |CLK_BUFGP         |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
@@ -45,11 +45,11 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    4.234|         |         |         |
+CLK            |    4.046|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu May 11 18:52:30 2017 
+Analysis completed Thu May 18 09:18:44 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:

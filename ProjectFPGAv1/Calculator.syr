@@ -145,13 +145,14 @@ Elaborating entity <Adder8Bit> (architecture <Add>) from library <work>.
 Elaborating entity <Adder> (architecture <Add>) from library <work>.
 
 Elaborating entity <Multiplier> (architecture <Multiply>) from library <work>.
-INFO:HDLCompiler:679 - "D:\Projects\Xilinx\ProjectFPGAv1\Multiplier.vhd" Line 66. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "D:\Projects\Xilinx\ProjectFPGAv1\Multiplier.vhd" Line 67. Case statement is complete. others clause is never selected
 
 Elaborating entity <Divider> (architecture <Divide>) from library <work>.
 INFO:HDLCompiler:679 - "D:\Projects\Xilinx\ProjectFPGAv1\Divider.vhd" Line 123. Case statement is complete. others clause is never selected
 
 Elaborating entity <Decoder> (architecture <Display>) from library <work>.
-INFO:HDLCompiler:679 - "D:\Projects\Xilinx\ProjectFPGAv1\Calculator.vhd" Line 102. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "D:\Projects\Xilinx\ProjectFPGAv1\Calculator.vhd" Line 104. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "D:\Projects\Xilinx\ProjectFPGAv1\Calculator.vhd" Line 117. Case statement is complete. others clause is never selected
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -159,10 +160,12 @@ INFO:HDLCompiler:679 - "D:\Projects\Xilinx\ProjectFPGAv1\Calculator.vhd" Line 10
 
 Synthesizing Unit <Calculator>.
     Related source file is "D:\Projects\Xilinx\ProjectFPGAv1\Calculator.vhd".
-INFO:Xst:3210 - "D:\Projects\Xilinx\ProjectFPGAv1\Calculator.vhd" line 84: Output port <REMAINDER> of the instance <div4> is unconnected or connected to loadless signal.
-    Found 16-bit 4-to-1 multiplexer for signal <op[1]_div[7]_wide_mux_1_OUT> created at line 93.
+INFO:Xst:3210 - "D:\Projects\Xilinx\ProjectFPGAv1\Calculator.vhd" line 86: Output port <REMAINDER> of the instance <div4> is unconnected or connected to loadless signal.
+    Found 4x4-bit Read Only RAM for signal <op[1]_PWR_6_o_wide_mux_3_OUT>
+    Found 16-bit 4-to-1 multiplexer for signal <op[1]_div[7]_wide_mux_1_OUT> created at line 95.
     Summary:
-	inferred   2 Multiplexer(s).
+	inferred   1 RAM(s).
+	inferred   5 Multiplexer(s).
 Unit <Calculator> synthesized.
 
 Synthesizing Unit <ReadInput>.
@@ -175,21 +178,19 @@ Synthesizing Unit <ReadInput>.
     Found 4-bit register for signal <I>.
     Found 8-bit register for signal <NR1>.
     Found 8-bit register for signal <NR2>.
-    Found 2-bit register for signal <OP>.
     Found 1-bit register for signal <E>.
-    Found 2-bit register for signal <SIGN>.
+    Found 2-bit register for signal <OP>.
     Found 4-bit adder for signal <I[3]_GND_7_o_add_0_OUT> created at line 50.
-    Found 12-bit adder for signal <n0059> created at line 56.
+    Found 12-bit adder for signal <n0058> created at line 56.
     Found 12-bit adder for signal <n0040> created at line 56.
     Found 8-bit subtractor for signal <GND_7_o_unary_minus_7_OUT<7:0>> created at line 0.
     Found 4x7-bit multiplier for signal <B[3]_PWR_7_o_MuLt_2_OUT> created at line 56.
     Found 4x4-bit multiplier for signal <C[3]_PWR_7_o_MuLt_3_OUT> created at line 56.
-INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal A<1:0> may hinder XST clustering optimizations.
     Summary:
 	inferred   2 Multiplier(s).
 	inferred   4 Adder/Subtractor(s).
-	inferred  35 D-type flip-flop(s).
-	inferred   1 Multiplexer(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
 Unit <ReadInput> synthesized.
 
 Synthesizing Unit <Debouncer>.
@@ -218,19 +219,19 @@ Unit <Adder> synthesized.
 Synthesizing Unit <Multiplier>.
     Related source file is "D:\Projects\Xilinx\ProjectFPGAv1\Multiplier.vhd".
     Found 1-bit register for signal <sign>.
+    Found 8-bit register for signal <NA>.
     Found 16-bit register for signal <NB>.
-    Found 16-bit register for signal <SUM>.
     Found 1-bit register for signal <state>.
     Found 16-bit register for signal <Q>.
-    Found 8-bit register for signal <NA>.
-    Found 8-bit adder for signal <A[7]_GND_16_o_add_1_OUT> created at line 32.
-    Found 16-bit adder for signal <GND_16_o_GND_16_o_add_4_OUT> created at line 39.
-    Found 16-bit adder for signal <SUM[15]_NB[15]_add_7_OUT> created at line 53.
-    Found 16-bit adder for signal <SUM[15]_GND_16_o_add_10_OUT> created at line 62.
+    Found 16-bit register for signal <SUM>.
+    Found 8-bit adder for signal <A[7]_GND_16_o_add_1_OUT> created at line 36.
+    Found 16-bit adder for signal <GND_16_o_GND_16_o_add_4_OUT> created at line 43.
+    Found 16-bit adder for signal <SUM[15]_NB[15]_add_9_OUT> created at line 54.
+    Found 16-bit adder for signal <SUM[15]_GND_16_o_add_12_OUT> created at line 63.
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred  58 D-type flip-flop(s).
-	inferred   7 Multiplexer(s).
+	inferred   6 Multiplexer(s).
 Unit <Multiplier> synthesized.
 
 Synthesizing Unit <Divider>.
@@ -528,8 +529,9 @@ Unit <div_15u_14u> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 5
+# RAMs                                                 : 6
  16x7-bit single-port Read Only RAM                    : 5
+ 4x4-bit single-port Read Only RAM                     : 1
 # Multipliers                                          : 2
  4x4-bit multiplier                                    : 1
  7x4-bit multiplier                                    : 1
@@ -555,11 +557,11 @@ Macro Statistics
  8-bit adder                                           : 4
  8-bit subtractor                                      : 1
  9-bit adder                                           : 1
-# Registers                                            : 34
+# Registers                                            : 33
  1-bit register                                        : 11
  16-bit register                                       : 3
  17-bit register                                       : 1
- 2-bit register                                        : 4
+ 2-bit register                                        : 3
  20-bit register                                       : 1
  3-bit register                                        : 1
  4-bit register                                        : 3
@@ -585,13 +587,13 @@ Macro Statistics
  29-bit comparator lessequal                           : 1
  4-bit comparator greater                              : 2
  9-bit comparator greater                              : 1
-# Multiplexers                                         : 1689
- 1-bit 2-to-1 multiplexer                              : 1644
+# Multiplexers                                         : 1693
+ 1-bit 2-to-1 multiplexer                              : 1643
  15-bit 2-to-1 multiplexer                             : 11
- 16-bit 2-to-1 multiplexer                             : 5
+ 16-bit 2-to-1 multiplexer                             : 6
  16-bit 4-to-1 multiplexer                             : 1
  3-bit 2-to-1 multiplexer                              : 2
- 4-bit 2-to-1 multiplexer                              : 4
+ 4-bit 2-to-1 multiplexer                              : 8
  7-bit 2-to-1 multiplexer                              : 3
  7-bit 4-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 18
@@ -605,6 +607,20 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+
+Synthesizing (advanced) Unit <Calculator>.
+INFO:Xst:3231 - The small RAM <Mram_op[1]_PWR_6_o_wide_mux_3_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <op>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Calculator> synthesized (advanced).
 
 Synthesizing (advanced) Unit <Debouncer>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
@@ -675,16 +691,16 @@ The following registers are absorbed into accumulator <SUM>: 1 register on signa
 Unit <Multiplier> synthesized (advanced).
 
 Synthesizing (advanced) Unit <ReadInput>.
-The following registers are absorbed into counter <I>: 1 register on signal <I>.
-	Multiplier <Mmult_B[3]_PWR_7_o_MuLt_2_OUT> in block <ReadInput> and adder/subtractor <Madd_n0059_Madd> in block <ReadInput> are combined into a MAC<Maddsub_B[3]_PWR_7_o_MuLt_2_OUT>.
+	Multiplier <Mmult_B[3]_PWR_7_o_MuLt_2_OUT> in block <ReadInput> and adder/subtractor <Madd_n0058_Madd> in block <ReadInput> are combined into a MAC<Maddsub_B[3]_PWR_7_o_MuLt_2_OUT>.
 Unit <ReadInput> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 5
+# RAMs                                                 : 6
  16x7-bit single-port distributed Read Only RAM        : 5
+ 4x4-bit single-port distributed Read Only RAM         : 1
 # MACs                                                 : 1
  7x4-to-8-bit MAC                                      : 1
 # Multipliers                                          : 1
@@ -698,15 +714,14 @@ Macro Statistics
  4-bit adder carry in                                  : 4
  8-bit adder                                           : 5
  8-bit subtractor                                      : 1
-# Counters                                             : 4
+# Counters                                             : 3
  17-bit up counter                                     : 1
  20-bit up counter                                     : 1
- 4-bit up counter                                      : 1
  9-bit up counter                                      : 1
 # Accumulators                                         : 1
  16-bit up accumulator                                 : 1
-# Registers                                            : 133
- Flip-Flops                                            : 133
+# Registers                                            : 135
+ Flip-Flops                                            : 135
 # Comparators                                          : 132
  15-bit comparator lessequal                           : 77
  16-bit comparator lessequal                           : 8
@@ -726,13 +741,13 @@ Macro Statistics
  29-bit comparator lessequal                           : 1
  4-bit comparator greater                              : 2
  9-bit comparator greater                              : 1
-# Multiplexers                                         : 1707
- 1-bit 2-to-1 multiplexer                              : 1664
+# Multiplexers                                         : 1711
+ 1-bit 2-to-1 multiplexer                              : 1663
  15-bit 2-to-1 multiplexer                             : 11
- 16-bit 2-to-1 multiplexer                             : 4
+ 16-bit 2-to-1 multiplexer                             : 5
  16-bit 4-to-1 multiplexer                             : 1
  3-bit 2-to-1 multiplexer                              : 2
- 4-bit 2-to-1 multiplexer                              : 4
+ 4-bit 2-to-1 multiplexer                              : 8
  7-bit 2-to-1 multiplexer                              : 3
  7-bit 4-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 17
@@ -745,8 +760,16 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2677 - Node <div4/REMAINDER_7> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <div4/REMAINDER_6> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <div4/REMAINDER_5> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <div4/REMAINDER_4> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <div4/REMAINDER_3> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <div4/REMAINDER_2> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <div4/REMAINDER_1> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <div4/REMAINDER_0> of sequential type is unconnected in block <Calculator>.
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <div4/FSM_0> on signal <state[1:4]> with user encoding.
+Optimizing FSM <FSM_0> on signal <state[1:4]> with user encoding.
 -------------------
  State | Encoding
 -------------------
@@ -781,27 +804,15 @@ Optimizing unit <ReadInput> ...
 
 Optimizing unit <Debouncer> ...
 
-Optimizing unit <Multiplier> ...
-
-Optimizing unit <Divider> ...
-
 Optimizing unit <Adder8Bit> ...
 
 Optimizing unit <Decoder> ...
 
 Optimizing unit <rem_15u_4u> ...
-WARNING:Xst:2677 - Node <div4/REMAINDER_7> of sequential type is unconnected in block <Calculator>.
-WARNING:Xst:2677 - Node <div4/REMAINDER_6> of sequential type is unconnected in block <Calculator>.
-WARNING:Xst:2677 - Node <div4/REMAINDER_5> of sequential type is unconnected in block <Calculator>.
-WARNING:Xst:2677 - Node <div4/REMAINDER_4> of sequential type is unconnected in block <Calculator>.
-WARNING:Xst:2677 - Node <div4/REMAINDER_3> of sequential type is unconnected in block <Calculator>.
-WARNING:Xst:2677 - Node <div4/REMAINDER_2> of sequential type is unconnected in block <Calculator>.
-WARNING:Xst:2677 - Node <div4/REMAINDER_1> of sequential type is unconnected in block <Calculator>.
-WARNING:Xst:2677 - Node <div4/REMAINDER_0> of sequential type is unconnected in block <Calculator>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Calculator, actual ratio is 16.
+Found area constraint ratio of 100 (+ 5) on block Calculator, actual ratio is 17.
 
 Final Macro Processing ...
 
@@ -814,8 +825,8 @@ Unit <Calculator> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 189
- Flip-Flops                                            : 189
+# Registers                                            : 187
+ Flip-Flops                                            : 187
 # Shift Registers                                      : 2
  3-bit shift register                                  : 2
 
@@ -840,32 +851,32 @@ Top Level Output File Name         : Calculator.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1840
+# BELS                             : 1845
 #      GND                         : 1
 #      INV                         : 28
 #      LUT1                        : 44
-#      LUT2                        : 44
-#      LUT3                        : 154
-#      LUT4                        : 154
-#      LUT5                        : 272
-#      LUT6                        : 421
+#      LUT2                        : 40
+#      LUT3                        : 171
+#      LUT4                        : 144
+#      LUT5                        : 276
+#      LUT6                        : 418
 #      MUXCY                       : 341
-#      MUXF7                       : 9
+#      MUXF7                       : 10
 #      VCC                         : 1
 #      XORCY                       : 371
-# FlipFlops/Latches                : 190
-#      FD                          : 23
+# FlipFlops/Latches                : 189
+#      FD                          : 25
 #      FDE                         : 100
-#      FDR                         : 30
-#      FDRE                        : 37
+#      FDR                         : 26
+#      FDRE                        : 38
 # Shift Registers                  : 2
 #      SRLC16E                     : 2
 # Clock Buffers                    : 3
 #      BUFG                        : 2
 #      BUFGP                       : 1
-# IO Buffers                       : 16
+# IO Buffers                       : 20
 #      IBUF                        : 5
-#      OBUF                        : 11
+#      OBUF                        : 15
 # DSPs                             : 3
 #      DSP48A1                     : 3
 
@@ -876,22 +887,22 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             190  out of  18224     1%  
- Number of Slice LUTs:                 1119  out of   9112    12%  
-    Number used as Logic:              1117  out of   9112    12%  
+ Number of Slice Registers:             189  out of  18224     1%  
+ Number of Slice LUTs:                 1123  out of   9112    12%  
+    Number used as Logic:              1121  out of   9112    12%  
     Number used as Memory:                2  out of   2176     0%  
        Number used as SRL:                2
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1132
-   Number with an unused Flip Flop:     942  out of   1132    83%  
-   Number with an unused LUT:            13  out of   1132     1%  
-   Number of fully used LUT-FF pairs:   177  out of   1132    15%  
+ Number of LUT Flip Flop pairs used:   1135
+   Number with an unused Flip Flop:     946  out of   1135    83%  
+   Number with an unused LUT:            12  out of   1135     1%  
+   Number of fully used LUT-FF pairs:   177  out of   1135    15%  
    Number of unique control sets:        24
 
 IO Utilization: 
- Number of IOs:                          17
- Number of bonded IOBs:                  17  out of    232     7%  
+ Number of IOs:                          21
+ Number of bonded IOBs:                  21  out of    232     9%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
@@ -918,9 +929,9 @@ Clock Information:
 -----------------------------------------------+-----------------------------+-------+
 Clock Signal                                   | Clock buffer(FF name)       | Load  |
 -----------------------------------------------+-----------------------------+-------+
-dpl5/I[14]_PWR_17_o_div_5/a[14]_a[14]_MUX_551_o| NONE(read0/Madd_n0040_Madd1)| 1     |
-read0/db/Q                                     | BUFG                        | 30    |
 CLK                                            | BUFGP                       | 139   |
+dpl5/I[14]_PWR_17_o_div_5/a[14]_a[14]_MUX_551_o| NONE(read0/Madd_n0040_Madd1)| 1     |
+read0/db/Q                                     | BUFG                        | 29    |
 dpl5/newCLK                                    | BUFG                        | 25    |
 -----------------------------------------------+-----------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -934,8 +945,8 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 14.794ns (Maximum Frequency: 67.596MHz)
-   Minimum input arrival time before clock: 9.898ns
-   Maximum output required time after clock: 3.597ns
+   Minimum input arrival time before clock: 9.930ns
+   Maximum output required time after clock: 6.882ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -943,34 +954,9 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'read0/db/Q'
-  Clock period: 14.794ns (frequency: 67.596MHz)
-  Total number of paths / destination ports: 169469 / 49
--------------------------------------------------------------------------
-Delay:               14.794ns (Levels of Logic = 4)
-  Source:            read0/Mmult_C[3]_PWR_7_o_MuLt_3_OUT (DSP)
-  Destination:       read0/NR2_7 (FF)
-  Source Clock:      read0/db/Q rising
-  Destination Clock: read0/db/Q rising
-
-  Data Path: read0/Mmult_C[3]_PWR_7_o_MuLt_3_OUT to read0/NR2_7
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     DSP48A1:CLK->PCOUT47    1   6.743   0.000  read0/Mmult_C[3]_PWR_7_o_MuLt_3_OUT (read0/Mmult_C[3]_PWR_7_o_MuLt_3_OUT_PCOUT_to_Maddsub_B[3]_PWR_7_o_MuLt_2_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  read0/Maddsub_B[3]_PWR_7_o_MuLt_2_OUT (read0/Maddsub_B[3]_PWR_7_o_MuLt_2_OUT_PCOUT_to_Madd_n0040_Madd1_PCIN_47)
-     DSP48A1:PCIN47->P2    4   2.264   0.912  read0/Madd_n0040_Madd1 (read0/n0040<2>)
-     LUT4:I1->O            3   0.205   0.651  read0/Mmux_GND_7_o_BUS_0002_mux_7_OUT511 (read0/Mmux_GND_7_o_BUS_0002_mux_7_OUT51)
-     LUT6:I5->O            2   0.205   0.000  read0/Mmux_GND_7_o_BUS_0002_mux_7_OUT81 (read0/GND_7_o_BUS_0002_mux_7_OUT<7>)
-     FDE:D                     0.102          read0/NR1_7
-    ----------------------------------------
-    Total                     14.794ns (13.231ns logic, 1.563ns route)
-                                       (89.4% logic, 10.6% route)
-
-=========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
   Clock period: 5.442ns (frequency: 183.769MHz)
-  Total number of paths / destination ports: 2240 / 299
+  Total number of paths / destination ports: 2261 / 299
 -------------------------------------------------------------------------
 Delay:               5.442ns (Levels of Logic = 5)
   Source:            div4/A_1 (FF)
@@ -994,11 +980,36 @@ Delay:               5.442ns (Levels of Logic = 5)
                                        (28.7% logic, 71.3% route)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'read0/db/Q'
+  Clock period: 14.794ns (frequency: 67.596MHz)
+  Total number of paths / destination ports: 169453 / 42
+-------------------------------------------------------------------------
+Delay:               14.794ns (Levels of Logic = 4)
+  Source:            read0/Mmult_C[3]_PWR_7_o_MuLt_3_OUT (DSP)
+  Destination:       read0/NR2_7 (FF)
+  Source Clock:      read0/db/Q rising
+  Destination Clock: read0/db/Q rising
+
+  Data Path: read0/Mmult_C[3]_PWR_7_o_MuLt_3_OUT to read0/NR2_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     DSP48A1:CLK->PCOUT47    1   6.743   0.000  read0/Mmult_C[3]_PWR_7_o_MuLt_3_OUT (read0/Mmult_C[3]_PWR_7_o_MuLt_3_OUT_PCOUT_to_Maddsub_B[3]_PWR_7_o_MuLt_2_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  read0/Maddsub_B[3]_PWR_7_o_MuLt_2_OUT (read0/Maddsub_B[3]_PWR_7_o_MuLt_2_OUT_PCOUT_to_Madd_n0040_Madd1_PCIN_47)
+     DSP48A1:PCIN47->P2    4   2.264   0.912  read0/Madd_n0040_Madd1 (read0/n0040<2>)
+     LUT4:I1->O            3   0.205   0.651  read0/Mmux_GND_7_o_BUS_0002_mux_7_OUT511 (read0/Mmux_GND_7_o_BUS_0002_mux_7_OUT51)
+     LUT6:I5->O            2   0.205   0.000  read0/Mmux_GND_7_o_BUS_0002_mux_7_OUT81 (read0/GND_7_o_BUS_0002_mux_7_OUT<7>)
+     FDE:D                     0.102          read0/NR1_7
+    ----------------------------------------
+    Total                     14.794ns (13.231ns logic, 1.563ns route)
+                                       (89.4% logic, 10.6% route)
+
+=========================================================================
 Timing constraint: Default period analysis for Clock 'dpl5/newCLK'
-  Clock period: 6.001ns (frequency: 166.636MHz)
+  Clock period: 5.216ns (frequency: 191.709MHz)
   Total number of paths / destination ports: 205 / 35
 -------------------------------------------------------------------------
-Delay:               6.001ns (Levels of Logic = 5)
+Delay:               5.216ns (Levels of Logic = 4)
   Source:            dpl5/z (FF)
   Destination:       dpl5/Q_3 (FF)
   Source Clock:      dpl5/newCLK rising
@@ -1011,19 +1022,18 @@ Delay:               6.001ns (Levels of Logic = 5)
      FDE:C->Q              3   0.447   1.015  dpl5/z (dpl5/z)
      LUT6:I0->O           18   0.203   1.297  dpl5/z_GND_19_o_AND_70_o (dpl5/z_GND_19_o_AND_70_o)
      LUT4:I0->O            2   0.203   0.961  dpl5/Mmux_Q[6]_n1[3]_mux_41_OUT<0>121 (dpl5/Mmux_Q[6]_n1[3]_mux_41_OUT<0>12)
-     LUT5:I0->O            1   0.203   0.580  dpl5/Mmux_Q[6]_n1[3]_mux_41_OUT<3>5_SW0 (N110)
-     LUT6:I5->O            1   0.205   0.580  dpl5/Mmux_Q[6]_n1[3]_mux_41_OUT<3>5 (dpl5/Mmux_Q[6]_n1[3]_mux_41_OUT<3>4)
-     LUT5:I4->O            1   0.205   0.000  dpl5/Mmux_Q[6]_n1[3]_mux_41_OUT<3>6 (dpl5/Q[6]_n1[3]_mux_41_OUT<3>)
+     LUT6:I1->O            1   0.203   0.580  dpl5/Mmux_Q[6]_n1[3]_mux_41_OUT<3>3 (dpl5/Mmux_Q[6]_n1[3]_mux_41_OUT<3>1)
+     LUT6:I5->O            1   0.205   0.000  dpl5/Mmux_Q[6]_n1[3]_mux_41_OUT<3>6 (dpl5/Q[6]_n1[3]_mux_41_OUT<3>)
      FD:D                      0.102          dpl5/Q_3
     ----------------------------------------
-    Total                      6.001ns (1.568ns logic, 4.433ns route)
+    Total                      5.216ns (1.363ns logic, 3.853ns route)
                                        (26.1% logic, 73.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'dpl5/I[14]_PWR_17_o_div_5/a[14]_a[14]_MUX_551_o'
   Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
-Offset:              4.701ns (Levels of Logic = 1)
+Offset:              4.732ns (Levels of Logic = 1)
   Source:            DIN<1> (PAD)
   Destination:       read0/Madd_n0040_Madd1 (DSP)
   Destination Clock: dpl5/I[14]_PWR_17_o_div_5/a[14]_a[14]_MUX_551_o rising
@@ -1032,17 +1042,17 @@ Offset:              4.701ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             4   1.222   0.683  DIN_1_IBUF (DIN_1_IBUF)
+     IBUF:I->O             5   1.222   0.714  DIN_1_IBUF (DIN_1_IBUF)
      DSP48A1:B1                2.796          read0/Madd_n0040_Madd1
     ----------------------------------------
-    Total                      4.701ns (4.018ns logic, 0.683ns route)
-                                       (85.5% logic, 14.5% route)
+    Total                      4.732ns (4.018ns logic, 0.714ns route)
+                                       (84.9% logic, 15.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'read0/db/Q'
-  Total number of paths / destination ports: 298 / 26
+  Total number of paths / destination ports: 300 / 28
 -------------------------------------------------------------------------
-Offset:              9.898ns (Levels of Logic = 4)
+Offset:              9.930ns (Levels of Logic = 4)
   Source:            DIN<1> (PAD)
   Destination:       read0/NR2_7 (FF)
   Destination Clock: read0/db/Q rising
@@ -1051,14 +1061,14 @@ Offset:              9.898ns (Levels of Logic = 4)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             4   1.222   0.683  DIN_1_IBUF (DIN_1_IBUF)
+     IBUF:I->O             5   1.222   0.714  DIN_1_IBUF (DIN_1_IBUF)
      DSP48A1:B1->P2        4   3.123   0.912  read0/Madd_n0040_Madd1 (read0/n0040<2>)
      LUT4:I1->O            3   0.205   0.651  read0/Mmux_GND_7_o_BUS_0002_mux_7_OUT511 (read0/Mmux_GND_7_o_BUS_0002_mux_7_OUT51)
      LUT6:I5->O            2   0.205   0.000  read0/Mmux_GND_7_o_BUS_0002_mux_7_OUT81 (read0/GND_7_o_BUS_0002_mux_7_OUT<7>)
      FDE:D                     0.102          read0/NR1_7
     ----------------------------------------
-    Total                      9.898ns (7.653ns logic, 2.245ns route)
-                                       (77.3% logic, 22.7% route)
+    Total                      9.930ns (7.653ns logic, 2.277ns route)
+                                       (77.1% logic, 22.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
@@ -1099,6 +1109,28 @@ Offset:              3.597ns (Levels of Logic = 1)
                                        (83.9% logic, 16.1% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'read0/db/Q'
+  Total number of paths / destination ports: 44 / 4
+-------------------------------------------------------------------------
+Offset:              6.882ns (Levels of Logic = 4)
+  Source:            read0/NR1_6 (FF)
+  Destination:       operation<0> (PAD)
+  Source Clock:      read0/db/Q rising
+
+  Data Path: read0/NR1_6 to operation<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             13   0.447   1.161  read0/NR1_6 (read0/NR1_6)
+     LUT3:I0->O            1   0.205   0.580  nr1[7]_GND_6_o_not_equal_2_o_SW0 (N10)
+     LUT6:I5->O            4   0.205   0.931  nr1[7]_GND_6_o_not_equal_2_o (nr1[7]_GND_6_o_not_equal_2_o)
+     LUT4:I0->O            1   0.203   0.579  Mmux_operation11 (operation_0_OBUF)
+     OBUF:I->O                 2.571          operation_0_OBUF (operation<0>)
+    ----------------------------------------
+    Total                      6.882ns (3.631ns logic, 3.251ns route)
+                                       (52.8% logic, 47.2% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
@@ -1109,7 +1141,7 @@ Clock to Setup on destination clock CLK
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
 CLK            |    5.442|         |         |         |
-read0/db/Q     |    3.797|         |         |         |
+read0/db/Q     |    3.840|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock dpl5/I[14]_PWR_17_o_div_5/a[14]_a[14]_MUX_551_o
@@ -1125,9 +1157,9 @@ Clock to Setup on destination clock dpl5/newCLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |   44.531|         |         |         |
-dpl5/newCLK    |    6.001|         |         |         |
-read0/db/Q     |   48.878|         |         |         |
+CLK            |   43.647|         |         |         |
+dpl5/newCLK    |    5.216|         |         |         |
+read0/db/Q     |   47.993|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock read0/db/Q
@@ -1141,12 +1173,12 @@ read0/db/Q     |   14.794|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 15.34 secs
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 15.80 secs
  
 --> 
 
-Total memory usage is 317616 kilobytes
+Total memory usage is 317596 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    8 (   0 filtered)

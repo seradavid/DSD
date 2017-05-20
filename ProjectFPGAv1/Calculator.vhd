@@ -9,7 +9,8 @@ entity Calculator is
 		DIN : in  STD_LOGIC_VECTOR(3 downto 0);
 		BTN : in  STD_LOGIC;
 		Q   : out STD_LOGIC_VECTOR(6 downto 0);
-		AN0, AN1, AN2, AN3 : out STD_LOGIC);
+		AN0, AN1, AN2, AN3 : out STD_LOGIC;
+		operation : out STD_LOGIC_VECTOR(3 downto 0));
 end Calculator;
 
 architecture Calculate of Calculator is
@@ -75,6 +76,7 @@ signal add, sub       : STD_LOGIC_VECTOR(8  downto 0) := (others => '0');
 signal div, remainder : STD_LOGIC_VECTOR(7  downto 0) := (others => '0');
 signal mul            : STD_LOGIC_VECTOR(15 downto 0) := (others => '0');
 signal output         : STD_LOGIC_VECTOR(15 downto 0) := (others => '0');
+--signal oper           : STD_LOGIC_VECTOR(3  downto 0) := (others => '0');
 
 begin
 	read0: readinput  port map(DIN, CLK,    BTN, nr1,             nr2,  op, E);
@@ -86,7 +88,7 @@ begin
 	
 	nr2n <= not nr2;
 	
-	process(E, add, sub, mul, div, op)
+	process(E, add, sub, mul, div, op, nr1)
 	variable O : STD_LOGIC_VECTOR(15 downto 0) := (others => '0');
 	begin
 		if E = '1' then
@@ -104,8 +106,19 @@ begin
 			end case;
 			
 			output <= O;
+			operation <= (others => '0');
+		elsif nr1 /= "00000000" then
+			output <= std_logic_vector(resize(signed(nr1), 16));
+			case op is
+				when "00" => operation <= "0001";
+				when "01" => operation <= "0010";
+				when "10" => operation <= "0100";
+				when "11" => operation <= "1000";
+				when others => operation <= (others => '0');
+			end case;
 		else
 			output <= (others => '0');
+			operation <= (others => '0');
 		end if;
 	end process;
 end Calculate;
